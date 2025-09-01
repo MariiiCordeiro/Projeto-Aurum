@@ -62,7 +62,7 @@ body {
     color: #333333;
 }
 
-.form-login{
+.form-login {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,33 +70,36 @@ body {
     gap: 16px;
 }
 
-label{
+label {
     font-weight: 600;
     align-self: flex-start;
 }
 
-input{
+input {
     padding: 12px;
     border: 1px solid var(--borda);
     border-radius: 10px;
     font-size: 1rem;
     width: 100%;
 }
-.campo-senha{
+
+.campo-senha {
     display: flex;
     align-items: center;
     width: 100%;
     position: relative;
 }
 
-.icone-olho{
-    position: absolute;  /**para o filho ser ativado o relative no pai deve estar ativado para que o absolute funcione e o elemento flutue*/
+.icone-olho {
+    position: absolute;
+    /**para o filho ser ativado o relative no pai deve estar ativado para que o absolute funcione e o elemento flutue*/
     right: 5%;
     top: 50%;
-    transform: translateY(-50%); /** Move o elemento para cima metae da sua propria altura*/
+    transform: translateY(-50%);
+    /** Move o elemento para cima metae da sua propria altura*/
 }
 
-.botao-login{
+.botao-login {
     background-color: var(--fundo);
     color: var(--amarelo);
     padding: 14px;
@@ -107,12 +110,12 @@ input{
     width: 100%;
 }
 
-.botao-login:hover{
+.botao-login:hover {
     background-color: #26394E;
     cursor: pointer;
 }
 
-.link-esqueci{
+.link-esqueci {
     text-align: center;
     font-size: 0.9rem;
     text-decoration: underline;
@@ -121,11 +124,49 @@ input{
     margin-top: 10px;
 }
 
-.erro-login{
+.erro-login {
     color: var(--erro);
     font-weight: 600;
     text-align: center;
     margin-top: 20px;
     display: none;
 
+}
+
+.logo-reponsividade {
+    display: none;
+}
+
+/**Responsividade - Media Query*/
+@media (max-width: 900px) {
+
+    .container-login {
+        grid-template-columns: 1fr;
+        /*Ocupa somente uma fracao da tela*/
+    }
+
+    .painel-esquerdo {
+        margin: 0;
+    }
+
+    .decricao {
+        font-size: 1.1em;
+        max-width: 55%;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .logo-reponsividade {
+        display: inline;
+        /*Padrao da imagem*/
+    }
+
+}
+
+@media (max-width: 600px) {
+    .form-login {
+        max-width: 70%;
+    }
 }
